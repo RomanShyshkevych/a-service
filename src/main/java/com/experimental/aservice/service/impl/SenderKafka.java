@@ -27,7 +27,6 @@ public class SenderKafka implements Sender {
         return kafkaTemplate.send("api-gateway", gson.toJson(msgDto)).isDone();
     }
 
-
     public void sendMessage(String message) {
 
         ListenableFuture<SendResult<String, String>> future =
